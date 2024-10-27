@@ -23,3 +23,30 @@ nov_reviews = [
     [1019, 'November', None, 'Not great, but works for now.'],
     [1020, 'November', None, 'Broke within a few days. Would not recommend.'], 
     [1021, 'November', 1, 'Awful experience. It broke after just one use!']]
+
+may_hires = {
+    "emp_001": {
+        "name": "Alice Green",
+        "department": "Sales",
+        "performance": [-99, 3, 5, 5, 4],
+        "certifications": ["Excel", "Salesforce", "Excel"]
+    }
+}
+
+june_hires = {
+    "emp_002": {
+        "name": "Ben Williams",
+        "department": "Marketing",
+        "performance": [3, 4, 4, 5, -99],
+        "certifications": ["Google Ads", "SEO", "Google Ads"]
+    }
+}
+
+july_hires = {
+    "emp_003": {
+        "name": "Chloe Johnson",
+        "department": "HR",
+        "performance": [5, 3, 5, 5],
+        "certifications": ["Recruitment", "Excel"]
+    }
+}
