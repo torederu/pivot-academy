@@ -51,7 +51,7 @@ july_hires = {
     }
 }
 
-session_data = [{'user_id': 'user014', 'intensity': 'high', 'duration': 38},
+sessions = [{'user_id': 'user014', 'intensity': 'high', 'duration': 38},
  {'user_id': 'user002', 'intensity': 'recovery', 'duration': 76},
  {'user_id': 'user012', 'intensity': 'low', 'duration': 81},
  {'user_id': 'user015', 'intensity': 'medium', 'duration': 98},
