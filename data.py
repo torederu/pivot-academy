@@ -1,3 +1,32 @@
+def input_number(prompt=""):
+    """
+    A replacement for the built-in input() function that converts user input into a number.
+    
+    Parameters:
+    - prompt (str): The prompt to display to the user.
+    
+    Returns:
+    - int or float: The user's input converted to a number.
+    
+    Raises:
+    - ValueError: If the input cannot be converted to a number.
+    """
+    while True:
+        user_input = input(prompt)  # Use the built-in input() to get user input
+        
+        try:
+            # Try converting to integer first
+            return int(user_input)
+        except ValueError:
+            pass  # Not an integer, move to float conversion
+        
+        try:
+            # Try converting to float if integer conversion fails
+            return float(user_input)
+        except ValueError:
+            # Inform the user if the input is invalid
+            print("Invalid input. Please enter a valid number.")
+            
 # October Reviews
 oct_reviews = [
     [1001, 'October', 5, 'Great product! Highly recommend.'],
