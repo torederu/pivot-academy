@@ -140,3 +140,42 @@ sessions = [{'user_id': 'user014', 'intensity': 'high', 'duration': 38},
  {'user_id': 'user004', 'intensity': 'high', 'duration': 65},
  {'user_id': 'user003', 'intensity': 'recovery', 'duration': 110},
  {'user_id': 'user012', 'intensity': 'medium', 'duration': 85}]
+
+
+def load_celebs():
+    import os
+    import pickle
+
+    repo_url = "https://github.com/torederu/pivot-academy.git"
+    repo_name = "pivot-academy"
+    file_path = f"{repo_name}/celebs.pkl"
+
+    # Check if the repository is already cloned
+    if not os.path.exists(repo_name):
+        # Install git-lfs
+        print("Installing git-lfs...")
+        os.system("git lfs install")
+        
+        # Clone the repository
+        print(f"Cloning the repository from {repo_url}...")
+        os.system(f"git clone {repo_url}")
+    
+    # Check if the pickle file exists
+    if not os.path.exists(file_path):
+        raise FileNotFoundError(f"{file_path} not found. Check the repository or file structure.")
+
+    # Load and return the pickle file
+    print(f"Loading the pickle file from {file_path}...")
+    with open(file_path, "rb") as f:
+        return pickle.load(f)
+
+
+def plot_image(image_array):
+    """
+    Plots a NumPy array as an image using Matplotlib.
+    """
+    import matplotlib.pyplot as plt
+
+    plt.imshow(image_array)
+    plt.axis("off")
+    plt.show() 
