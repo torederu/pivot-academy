@@ -179,3 +179,13 @@ def plot_image(image_array):
     plt.imshow(image_array)
     plt.axis("off")
     plt.show() 
+
+
+def ppg_functions():
+    os.system("wget https://raw.githubusercontent.com/torederu/pivot-academy/main/ppg_functions.py -O ppg_functions.py")
+    
+    # Dynamically import functions after downloading
+    from ppg_functions import load_ppg_data, calculate_heart_rate_per_minute, plot_ppg_data, load_group_data
+    
+    # Return the imported functions directly
+    return load_ppg_data, calculate_heart_rate_per_minute, plot_ppg_data, load_group_data
