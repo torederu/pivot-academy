@@ -182,6 +182,7 @@ def plot_image(image_array):
 
 
 def ppg_functions():
+    import os
     os.system("wget https://raw.githubusercontent.com/torederu/pivot-academy/main/ppg_functions.py -O ppg_functions.py")
     
     # Dynamically import functions after downloading
